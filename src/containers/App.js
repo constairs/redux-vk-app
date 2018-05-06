@@ -1,7 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
 
-export default class App extends Component {
+class App extends Component {
 	render() {
-		return <div>Huii</div>
+		return <div>Supersus</div>
 	}
 }
+
+export default hot(module)(App)

@@ -1,15 +1,15 @@
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
-var wepbackHotMiddleware = require('webpack-hot-middleware');
+var webpackHotMiddleware = require('webpack-hot-middleware');
 var config = require('./webpack.config');
 var express = require('express');
 var compiler = webpack(config);
 
 var app = express();
-var port = 8888;
+var port = 1488;
 
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
-app.use(wepbackHotMiddleware(compiler));
+app.use(webpackHotMiddleware(compiler));
 
 app.get("/", function(req, res) {
 	res.sendFile(__dirname + '/index.html');
