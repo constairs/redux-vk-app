@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
 	devtool: 'cheap-module-eval-source-map',
@@ -10,7 +11,8 @@ module.exports = {
 		'./src/index',
 		// './src/styles/style.sass'
 	],
-	mode: 'development',
+	// mode: 'development',
+	mode: 'production',
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js',
@@ -18,6 +20,10 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
+		new UglifyJsPlugin({
+			test: /\.js($|\?)/i,
+			sourceMap: true
+		})
 	],
 	module: {
 		rules: [

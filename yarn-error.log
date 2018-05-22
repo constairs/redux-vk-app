@@ -2,7 +2,7 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js server
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\constairs\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\WinSCP;C:\altera\91sp2\quartus\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs;C:\Program Files\wget;C:\Program Files\gitflow;C:\php-5.6.33;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\constairs\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\constairs\AppData\Local\Programs\Python\Python37-32;C:\Users\constairs\AppData\Local\Microsoft\WindowsApps;C:\Users\constairs\AppData\Roaming\npm;C:\Users\constairs\AppData\Local\GitHubDesktop\bin;C:\Users\constairs\AppData\Roaming\Composer\vendor\bin;C:\Users\constairs\AppData\Local\Yarn\bin;C:\Program Files\Microsoft VS Code\bin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\constairs\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\WinSCP;C:\altera\91sp2\quartus\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs;C:\Program Files\wget;C:\Program Files\gitflow;C:\php-5.6.33;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\Yarn\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\constairs\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\constairs\AppData\Local\Programs\Python\Python37-32;C:\Users\constairs\AppData\Local\Microsoft\WindowsApps;C:\Users\constairs\AppData\Roaming\npm;C:\Users\constairs\AppData\Local\GitHubDesktop\bin;C:\Users\constairs\AppData\Roaming\Composer\vendor\bin;C:\Users\constairs\AppData\Local\Yarn\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\constairs\AppData\Local\Microsoft\WindowsApps
 
 Yarn version: 
   1.5.1
@@ -51,6 +51,8 @@ npm manifest:
   	"dependencies": {
   		"babel-polyfill": "^6.26.0",
   		"babel-runtime": "^6.26.0",
+  		"font-awesome": "^4.7.0",
+  		"imagesloaded": "^4.1.4",
   		"prop-types": "^15.6.1",
   		"react": "^16.3.2",
   		"react-dom": "^16.3.2",
@@ -2892,6 +2894,10 @@ Lockfile:
     dependencies:
       debug "^3.1.0"
   
+  font-awesome@^4.7.0:
+    version "4.7.0"
+    resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  
   for-in@^0.1.3:
     version "0.1.8"
     resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
@@ -3535,7 +3541,7 @@ Lockfile:
     version "3.3.8"
     resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.8.tgz#3f8e9c35d38708a3a7e0e9abb6c73e7ee7707b2b"
   
-  imagesloaded@^4.0.0:
+  imagesloaded@^4.0.0, imagesloaded@^4.1.4:
     version "4.1.4"
     resolved "https://registry.yarnpkg.com/imagesloaded/-/imagesloaded-4.1.4.tgz#1376efcd162bb768c34c3727ac89cc04051f3cc7"
     dependencies:
@@ -7553,7 +7559,7 @@ Lockfile:
 Trace: 
   Error: Command failed.
   Exit code: 3221225786
-  Command: C:\Windows\system32\cmd.exe
+  Command: C:\WINDOWS\system32\cmd.exe
   Arguments: /d /s /c node server.js
   Directory: D:\_projects\reduch
   Output:

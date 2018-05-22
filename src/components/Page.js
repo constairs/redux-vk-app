@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Masonry from 'react-masonry-component'
+import LazyLoad from 'react-lazyload'
 
 const masonryOptions = {
 	transitionDuration: '0.3s',
-	gutter: 20
+	gutter: 20,
+	stagger: 30,
 }
+
+const imagesLoadedOptions = { background: '.my-bg-image-el'}
 
 export default class Page extends Component {
 	onYearBtnClick(e) {
@@ -31,14 +35,15 @@ export default class Page extends Component {
           className="photos-gallery"
           elementType={'div'}
           options={masonryOptions}
-          disableImagesLoaded={false}
-          updateOnEachImageLoad={false}
+					imagesLoadedOptions={imagesLoadedOptions}
         >
 				{
 					photos.map((entry, index) =>
-						<div key={index} className="photo">
+						<div key={index} className="photo my-bg-image-el">
+										<LazyLoad height={'100%'}>
 										<p><img src={entry.photo_604 ? entry.photo_604 : entry.photo_130}  /></p>
 										<p className="photo-info">{`${entry.likes.count} `} <i className="fa fa-heart-o"></i></p>
+									</LazyLoad>
 						</div>)
 				}
         </Masonry>
@@ -51,5 +56,5 @@ export default class Page extends Component {
 Page.propTypes = {
 	year: PropTypes.number.isRequired,
 	photos: PropTypes.array.isRequired,
-	getPhotos: PropTypes.func.isRequired,
+	getPhotos: PropTypes.func.isRequired
 }
