@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Masonry from 'react-masonry-component'
-import LazyLoad from 'react-lazyload'
 
 const masonryOptions = {
 	transitionDuration: '0.3s',
@@ -40,10 +39,8 @@ export default class Page extends Component {
 				{
 					photos.map((entry, index) =>
 						<div key={index} className="photo my-bg-image-el">
-										<LazyLoad height={'100%'}>
-										<p><img src={entry.photo_604 ? entry.photo_604 : entry.photo_130}  /></p>
-										<p className="photo-info">{`${entry.likes.count} `} <i className="fa fa-heart-o"></i></p>
-									</LazyLoad>
+							<p><img src={entry.photo_604 ? entry.photo_604 : entry.photo_130}  /></p>
+							<p className="photo-info">{`${entry.likes.count} `} <i className="fa fa-heart-o"></i></p>
 						</div>)
 				}
         </Masonry>
